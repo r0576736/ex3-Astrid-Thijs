@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rekenmachine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="div">
+	<form name="Calculator" method="post" action="/">
+	<input type="text" id="result" name="result" placeholder="0">
+	<br>
+	<input class="button" type="button" value="7" onclick="getValue(this.value)">
+	<input class="button" type="button" value="8" onclick="getValue(this.value)">
+	<input class="button" type="button" value="9" onclick="getValue(this.value)">
+	<input class="button" type="button" value="/" onclick="getValue(this.value)">
+	<br>
+	<input class="button" type="button" value="4" onclick="getValue(this.value)">
+	<input class="button" type="button" value="5" onclick="getValue(this.value)">
+	<input class="button" type="button" value="6" onclick="getValue(this.value)">
+	<input class="button" type="button" value="*" onclick="getValue(this.value)">
+	<br>
+	<input class="button" type="button" value="1" onclick="getValue(this.value)">
+	<input class="button" type="button" value="2" onclick="getValue(this.value)">
+	<input class="button" type="button" value="3" onclick="getValue(this.value)">
+	<input class="button" type="button" value="+" onclick="getValue(this.value)">
+	<br>
+        <input class="button" type="submit" value="=">
+	<input class="button" type="button" value="0" onclick="getValue(this.value)">
+	<input class="button" type="button" value="." onclick="getValue(this.value)">
+	<input class="button" type="button" value="-" onclick="getValue(this.value)">
+	</form>
+</div>
+<script>
+    var calculate= "";
+    
+    function getValue(value){
+        calculate += value;
+        document.getElementById("result").value = calculate;
+    }
+    
+    
+</script>    
+</body>
+</html>
