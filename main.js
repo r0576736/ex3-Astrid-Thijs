@@ -10,6 +10,15 @@ var bodyparser = require('body-parser');        //bodyparser installeren via ter
 
 var app = express();                            //extensie gebruiken als variabele
 
+app.use (bodyparser.urlencoded({
+       extended:true
+}));
+
+/* URL Encoded gebruiken we omdat niet alle tekens kunnen worden opgenomen in een querystring.
+ * Dit rekenmachine bevat tekens zoals "=" die niet in de naam of in waarde van een parameter 
+ * mogen worden opgenomen. Deze tekens en of spaties worden vervangen door '%' [ASCII code]. */
+
+
 
 
 app.listen(123);
