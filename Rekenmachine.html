@@ -3,12 +3,13 @@
 <html>
     <head>
         <title>Rekenmachine</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./Rekenmachine.css">
     </head>
     <body>
+        <h3 id="header">Calculator</h3>
+        <br>
         <div id="div">
-	<form name="Calculator" method="post" action="/">
+	<form name="Calculator" id="Calculator" method="post" action="/">
 	<input type="text" id="result" name="result" placeholder="0">
 	<br>
 	<input class="button" type="button" value="7" onclick="getValue(this.value)">
@@ -28,9 +29,9 @@
 	<br>
         <input class="button" type="button" value="." onclick="getValue(this.value)">
 	<input class="button" type="button" value="0" onclick="getValue(this.value)">
-	<input class="button" type="submit" value="=" >
+	<input class="button" type="reset" value="C"  onclick="clearDisplay()">
 	<input class="button" type="button" value="-" onclick="getValue(this.value)">
-	<input class="button" type="reset" value="Clear" onclick="clearDisplay()">
+	<input class="button" type="submit" value=" Calculate " >
         </form>
 </div>
 <script>
@@ -42,8 +43,10 @@
     }
     
     function clearDisplay(){
-        document.getElementById("result").reset();
+        document.getElementById("Calculator").reset();
     }
+    
+   
     
 </script>    
 </body>

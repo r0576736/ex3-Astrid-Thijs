@@ -1,0 +1,27 @@
+body{
+    background-color: lightseagreen;
+}
+
+#header {
+    color: orangered;
+    font-family: verdana;
+    font-size: 100%;
+}
+
+#div  {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+}
+
+.button {
+color: orangered;
+    font-family: verdana;
+    font-size: 100%;
+}
+
+#result{
+    color: orangered;
+    font-family: verdana;
+    font-size: 49%;
+}

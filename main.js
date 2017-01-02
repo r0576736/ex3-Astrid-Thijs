@@ -21,30 +21,30 @@ app.use (bodyParser.urlencoded({
 app.use (bodyParser.json());        //ontleed json applicatie
 
 
-var object = [];
+var object = [];                                        //uitkomstberekening
 
-app.get("/", function(req, res){
+app.get("/", function(req, res){                        //html rekenmachine opvragen
         res.sendfile('./Rekenmachine.html');
 });
 
 
-app.post("/", function(req, res){
+app.post("/", function(req, res){                       //berekening uitvoeren in rekenmachine
     var calculate = req.body.result;
     var recalculate = eval(req.body.result); 
 
     object.push({"Berekening":  calculate,  "Resultaat": recalculate});
     console.log(recalculate);
-    res.status(201).send(object);
+    res.status(203).send(object);               
     
 });
 
-app.get("/object", function(req, res){
+app.get("/object", function(req, res){                  //lijst van alle berekeningen 
     res.send(object);
 });
 
 
 
 
-app.listen(1234);
-console.log("Hello Astrid");
+app.listen(1234);                                       //rekenmachine draait op localhost:1234
+console.log("Hello Astrid");                            //check
 
