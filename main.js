@@ -30,7 +30,7 @@ app.get("/", function(req, res){                        //html rekenmachine opvr
 
 app.post("/", function(req, res){                       //berekening uitvoeren in rekenmachine
     var calculate = req.body.result;
-    var recalculate = eval(req.body.result); 
+    var recalculate = eval(req.body.result);            //neem altijd laatste waarde om te berekenen
 
     object.push({"Berekening":  calculate,  "Resultaat": recalculate});
     console.log(recalculate);
