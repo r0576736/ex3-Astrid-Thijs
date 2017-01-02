@@ -26,11 +26,12 @@
 	<input class="button" type="button" value="3" onclick="getValue(this.value)">
 	<input class="button" type="button" value="+" onclick="getValue(this.value)">
 	<br>
-        <input class="button" type="submit" value="=">
+        <input class="button" type="button" value="." onclick="getValue(this.value)">
 	<input class="button" type="button" value="0" onclick="getValue(this.value)">
-	<input class="button" type="button" value="." onclick="getValue(this.value)">
+	<input class="button" type="submit" value="=" >
 	<input class="button" type="button" value="-" onclick="getValue(this.value)">
-	</form>
+	<input class="button" type="reset" value="Clear" onclick="clearDisplay()">
+        </form>
 </div>
 <script>
     var calculate= "";
@@ -40,6 +41,9 @@
         document.getElementById("result").value = calculate;
     }
     
+    function clearDisplay(){
+        document.getElementById("result").reset();
+    }
     
 </script>    
 </body>
