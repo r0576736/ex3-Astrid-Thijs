@@ -23,16 +23,14 @@ app.use (bodyParser.json());        //ontleed json applicatie
 
 var result = [];
 app.get("/", function(request, response){
-        response.sendfile('/Rekenmachine.html');
+        response.sendfile('./Rekenmachine.html');
 });
 
 
 
 
-app.listen(123);
 
 
-
-
+app.listen(1234);
 console.log("Hello Astrid");
 
